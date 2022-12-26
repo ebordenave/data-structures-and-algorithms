@@ -19,3 +19,11 @@ cookie_one.set_color('yellow')
 
 print('\nCookie one is now', cookie_one.get_color())
 print('Cookie two is still', cookie_two.get_color())
+
+
+# class LinkedList:
+#     def __init__(self, value):
+        
+#     def append(self, value):
+        
+#     def pop(self):
