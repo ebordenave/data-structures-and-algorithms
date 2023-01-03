@@ -2,7 +2,7 @@ class Node:
     def __init__(self, value=0, next=None):
         self.value = value
         self.next = next
-    
+
 class LinkedLists:
     def __init__(self, value):
         new_node = Node(value)
@@ -12,7 +12,7 @@ class LinkedLists:
         
     def print_list(self):
         curr = self.head
-        while curr is not None:
+        while curr:
             print(curr.value)
             curr = curr.next
     
@@ -25,7 +25,8 @@ class LinkedLists:
             self.tail.next = new_node
             self.tail = new_node
             self.length += 1
-            
+        return True
+    
     def pop(self):
         if self.length == 0:
             return None
@@ -33,7 +34,7 @@ class LinkedLists:
         curr = self.head
         pre = self.head
         
-        while curr.next:
+        while curr.next is not None:
             pre = curr
             curr = curr.next
             
@@ -46,13 +47,10 @@ class LinkedLists:
             self.tail = None
         return curr.value
     
-my_linked_list = LinkedLists(10)
+my_linked_list = LinkedLists(3)
 
-my_linked_list.append(9)
+my_linked_list.append(2)
 
 my_linked_list.pop()
 
 my_linked_list.print_list()
-            
-        
-            
