@@ -2,7 +2,7 @@ class Node:
     def __init__(self, value=0, next=None):
         self.value = value
         self.next = next
-
+        
 class LinkedLists:
     def __init__(self, value):
         new_node = Node(value)
@@ -45,12 +45,13 @@ class LinkedLists:
         if self.length == 0:
             self.head = None
             self.tail = None
-        return curr.value
-    
-my_linked_list = LinkedLists(3)
+        return curr
+
+
+my_linked_list = LinkedLists(1)
 
 my_linked_list.append(2)
 
 my_linked_list.pop()
 
-my_linked_list.print_list()
+my_linked_list.print_list()            
