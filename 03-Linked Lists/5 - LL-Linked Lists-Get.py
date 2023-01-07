@@ -47,6 +47,22 @@ class LinkedLists:
             self.tail = None
         return curr.value
     
+    def pop_first(self):
+        if self.length == 0:
+            return None
+        else:
+            temp_ptr = self.head
+            
+            self.head = self.head.next
+            temp_ptr = None
+            self.length -= 1
+            
+        if self.length == 0:
+            self.tail = None
+        return temp_ptr.value
+            
+        
+    
             
             
 my_linked_list = LinkedLists(9)

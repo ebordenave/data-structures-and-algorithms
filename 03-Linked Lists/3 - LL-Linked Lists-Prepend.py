@@ -46,11 +46,23 @@ class LinkedLists:
             self.tail = None
         return curr.value
     
+    def pre(self,value):
+        new_node = Node(value)
+        
+        if self.length == 0:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            new_node.next = self.head
+            self.head = new_node
+            self.length += 1
+            
+    
 my_linked_list = LinkedLists(10)
 
-my_linked_list.append(9)
+my_linked_list.append(11)
 
-my_linked_list.pop()
+my_linked_list.pre(9)
 
 my_linked_list.print_list()
             
